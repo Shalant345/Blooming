@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Delights Flower Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-spa me-2"></i>Blooming Delights
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-3 fw-bold">Beautiful Flowers for Every Occasion</h1>
+                    <p class="lead">Fresh, vibrant blooms delivered to your doorstep</p>
+                    <button class="btn btn-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#orderModal">
+                        Order Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section with Tabs -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Our Flower Collections</h2>
+                <p class="lead">Choose from our wide variety of floral arrangements</p>
+            </div>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs justify-content-center mb-4" id="flowerTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="bouquets-tab" data-bs-toggle="tab" data-bs-target="#bouquets" type="button" role="tab">Bouquets</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="plants-tab" data-bs-toggle="tab" data-bs-target="#plants" type="button" role="tab">Plants</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="special-tab" data-bs-toggle="tab" data-bs-target="#special" type="button" role="tab">Special Occasions</button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="flowerTabsContent">
+                <!-- Bouquets Tab -->
+                <div class="tab-pane fade show active" id="bouquets" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?flower-bouquet" class="card-img-top" alt="Spring Bouquet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spring Bouquet</h5>
+                                    <p class="card-text">A vibrant mix of seasonal flowers perfect for any occasion.</p>
+                                    <p class="fw-bold">$39.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?rose-bouquet" class="card-img-top" alt="Rose Bouquet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Elegant Roses</h5>
+                                    <p class="card-text">Classic red roses arranged beautifully with greenery.</p>
+                                    <p class="fw-bold">$49.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?wildflower-bouquet" class="card-img-top" alt="Wildflower Bouquet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Wildflower Collection</h5>
+                                    <p class="card-text">A rustic arrangement of wildflowers for a natural look.</p>
+                                    <p class="fw-bold">$34.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plants Tab -->
+                <div class="tab-pane fade" id="plants" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?succulent-plant" class="card-img-top" alt="Succulent">
+                                <div class="card-body">
+                                    <h5 class="card-title">Succulent Collection</h5>
+                                    <p class="card-text">Low-maintenance succulents perfect for home or office.</p>
+                                    <p class="fw-bold">$24.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?orchid-plant" class="card-img-top" alt="Orchid">
+                                <div class="card-body">
+                                    <h5 class="card-title">Elegant Orchid</h5>
+                                    <p class="card-text">Beautiful flowering orchid that adds elegance to any space.</p>
+                                    <p class="fw-bold">$29.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?indoor-plant" class="card-img-top" alt="Fiddle Leaf Fig">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fiddle Leaf Fig</h5>
+                                    <p class="card-text">Popular indoor plant that makes a statement in any room.</p>
+                                    <p class="fw-bold">$59.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Occasions Tab -->
+                <div class="tab-pane fade" id="special" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?wedding-bouquet" class="card-img-top" alt="Wedding Bouquet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Wedding Bouquet</h5>
+                                    <p class="card-text">Elegant white flowers for the perfect wedding day.</p>
+                                    <p class="fw-bold">$79.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?valentine-bouquet" class="card-img-top" alt="Valentine's Bouquet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Valentine's Special</h5>
+                                    <p class="card-text">Romantic red roses with baby's breath for your special someone.</p>
+                                    <p class="fw-bold">$69.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://source.unsplash.com/random/300x200/?funeral-flowers" class="card-img-top" alt="Sympathy Arrangement">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sympathy Arrangement</h5>
+                                    <p class="card-text">Beautiful white lilies to express your condolences.</p>
+                                    <p class="fw-bold">$59.99</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Slider -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>What Our Customers Say</h2>
+                <p class="lead">Hear from our happy customers</p>
+            </div>
+
+            <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-item text-center">
+                            <img src="https://source.unsplash.com/random/100x100/?woman-portrait" class="rounded-circle mb-3" alt="Customer" width="100">
+                            <p class="lead">"The flowers were absolutely stunning and arrived fresh and beautiful. My wife loved them!"</p>
+                            <h5>Michael Johnson</h5>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item text-center">
+                            <img src="https://source.unsplash.com/random/100x100/?man-portrait" class="rounded-circle mb-3" alt="Customer" width="100">
+                            <p class="lead">"I order flowers for my office every week and Blooming Delights never disappoints. Always fresh and beautiful!"</p>
+                            <h5>Sarah Williams</h5>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item text-center">
+                            <img src="https://source.unsplash.com/random/100x100/?elderly-woman" class="rounded-circle mb-3" alt="Customer" width="100">
+                            <p class="lead">"The sympathy arrangement was perfect and delivered right on time. Thank you for your thoughtful service."</p>
+                            <h5>Robert Chen</h5>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Accordion -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">About Blooming Delights</h2>
+                    <p class="lead">We are a family-owned flower shop dedicated to bringing beauty and joy to your life through flowers.</p>
+                    <p>Founded in 2010, Blooming Delights has been serving the community with fresh, beautiful flowers for all occasions. Our expert florists create stunning arrangements that are sure to impress.</p>
+                    
+                    <!-- Bootstrap List Group -->
+                    <h4 class="mt-4">Why Choose Us?</h4>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-check-circle text-success me-2"></i> Fresh flowers daily</span>
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-check-circle text-success me-2"></i> Same-day delivery</span>
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-check-circle text-success me-2"></i> Expert florists</span>
+                            <span class="badge bg-primary rounded-pill">3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-check-circle text-success me-2"></i> Custom arrangements</span>
+                            <span class="badge bg-primary rounded-pill">4</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://source.unsplash.com/random/600x400/?flower-shop" class="img-fluid rounded mb-4" alt="Our Flower Shop">
+                    
+                    <!-- Accordion -->
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    How do I care for my flowers?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Change the water every 2-3 days and trim the stems at an angle. Keep them away from direct sunlight and heat sources.</p>
+                                    <img src="https://source.unsplash.com/random/300x200/?flower-care" class="img-fluid rounded" alt="Flower Care">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Do you offer same-day delivery?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes! Orders placed before 2pm on weekdays and 12pm on Saturdays are eligible for same-day delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Can I customize an arrangement?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Absolutely! Contact us with your ideas and our florists will create a custom arrangement just for you.</p>
+                                    <img src="https://source.unsplash.com/random/300x200/?custom-flower-arrangement" class="img-fluid rounded" alt="Custom Arrangement">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Contact Us</h2>
+                <p class="lead">Have questions? We'd love to hear from you!</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-info">
+                        <div class="contact-item d-flex mb-4">
+                            <div class="icon me-4">
+                                <i class="fas fa-map-marker-alt fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Our Location</h5>
+                                <p>123 Flower Street, Garden City, GC 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex mb-4">
+                            <div class="icon me-4">
+                                <i class="fas fa-phone fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Call Us</h5>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex mb-4">
+                            <div class="icon me-4">
+                                <i class="fas fa-envelope fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Email Us</h5>
+                                <p>info@bloomingdelights.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex">
+                            <div class="icon me-4">
+                                <i class="fas fa-clock fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Hours</h5>
+                                <p>Monday - Friday: 9am - 7pm<br>Saturday: 9am - 5pm<br>Sunday: 10am - 3pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flower Care Tips Section with Tooltips -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Flower Care Tips</h2>
+                <p class="lead">Keep your flowers looking fresh longer</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="tip-card text-center p-4 h-100">
+                        <div class="tip-icon mb-3">
+                            <i class="fas fa-tint fa-3x text-success"></i>
+                        </div>
+                        <h5 class="mb-3">Water Properly</h5>
+                        <p>Change water every 2-3 days and add flower food <a href="#" data-bs-toggle="tooltip" title="Available for purchase in our shop!" class="text-success"><i class="fas fa-info-circle"></i></a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="tip-card text-center p-4 h-100">
+                        <div class="tip-icon mb-3">
+                            <i class="fas fa-cut fa-3x text-success"></i>
+                        </div>
+                        <h5 class="mb-3">Trim Stems</h5>
+                        <p>Cut stems at a 45-degree angle every few days <a href="#" data-bs-toggle="tooltip" title="Use sharp, clean scissors for best results" class="text-success"><i class="fas fa-info-circle"></i></a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="tip-card text-center p-4 h-100">
+                        <div class="tip-icon mb-3">
+                            <i class="fas fa-sun fa-3x text-success"></i>
+                        </div>
+                        <h5 class="mb-3">Avoid Direct Sun</h5>
+                        <p>Keep flowers in a cool spot away from direct sunlight and heat</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="tip-card text-center p-4 h-100">
+                        <div class="tip-icon mb-3">
+                            <i class="fas fa-leaf fa-3x text-success"></i>
+                        </div>
+                        <h5 class="mb-3">Remove Foliage</h5>
+                        <p>Remove leaves below water line to prevent bacterial growth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Our Floral Gallery</h2>
+                <p class="lead">Some of our recent creations</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <img src="https://source.unsplash.com/random/400x300/?flower-arrangement-1" class="img-fluid rounded" alt="Floral Arrangement">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://source.unsplash.com/random/400x300/?flower-arrangement-2" class="img-fluid rounded" alt="Floral Arrangement">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://source.unsplash.com/random/400x300/?flower-arrangement-3" class="img-fluid rounded" alt="Floral Arrangement">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://source.unsplash.com/random/400x300/?flower-arrangement-4" class="img-fluid rounded" alt="Floral Arrangement">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://source.unsplash.com/random/400x300/?flower-arrangement-5" class="img-fluid rounded" alt="Floral Arrangement">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://source.unsplash.com/random/400x300/?flower-arrangement-6" class="img-fluid rounded" alt="Floral Arrangement">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p class="mb-0">Get seasonal flower tips, special offers, and exclusive discounts!</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Blooming Delights</h5>
+                    <p>Bringing beauty and joy to your life through flowers since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="#products" class="text-white">Products</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white">About</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Returns & Refunds</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Payment Methods</h5>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa fa-2x me-2"></i>
+                        <i class="fab fa-cc-mastercard fa-2x me-2"></i>
+                        <i class="fab fa-cc-amex fa-2x me-2"></i>
+                        <i class="fab fa-cc-paypal fa-2x"></i>
+                    </div>
+                    <p class="small mt-3">© 2023 Blooming Delights. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Place Your Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="orderName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="orderName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="orderEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="orderEmail" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="orderPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="orderPhone" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="orderDate" class="form-label">Delivery Date</label>
+                                <input type="date" class="form-control" id="orderDate" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderProduct" class="form-label">Select Product</label>
+                            <select class="form-select" id="orderProduct" required>
+                                <option value="" selected disabled>Choose a product...</option>
+                                <option value="Spring Bouquet">Spring Bouquet - $39.99</option>
+                                <option value="Elegant Roses">Elegant Roses - $49.99</option>
+                                <option value="Wildflower Collection">Wildflower Collection - $34.99</option>
+                                <option value="Succulent Collection">Succulent Collection - $24.99</option>
+                                <option value="Elegant Orchid">Elegant Orchid - $29.99</option>
+                                <option value="Wedding Bouquet">Wedding Bouquet - $79.99</option>
+                                <option value="Valentine's Special">Valentine's Special - $69.99</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderMessage" class="form-label">Special Instructions</label>
+                            <textarea class="form-control" id="orderMessage" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderAddress" class="form-label">Delivery Address</label>
+                            <textarea class="form-control" id="orderAddress" rows="2" required></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="orderGift" checked>
+                            <label class="form-check-label" for="orderGift">
+                                This is a gift (include gift message)
+                            </label>
+                        </div>
+                        <div class="mb-3" id="giftMessageContainer">
+                            <label for="giftMessage" class="form-label">Gift Message</label>
+                            <textarea class="form-control" id="giftMessage" rows="2"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="orderForm" class="btn btn-success">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
